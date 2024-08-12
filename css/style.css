@@ -18,7 +18,7 @@ body {
   padding: 0 250px;
 }
 
-/******************************** Шапка ************************/
+/*********************************************************** Шапка *************************************************************/
 header {
   background-image: url(../img/bg.jpg);
   min-width: 1440px;
@@ -89,8 +89,10 @@ header {
 }
 
 /*********************************************************** Навигация *************************************************************/
+
 .navbar {
   margin-top: 19px;
+  margin-bottom: 76px;
 }
 .menu_inner {
   display: flex;
@@ -136,4 +138,101 @@ header {
 
 .nav li:nth-child(5) a {
   padding-left: 29px;
+}
+
+/*********************************************************** Our Story *************************************************************/
+
+.our_story {
+  margin: 0 auto;
+}
+.story_text {
+  margin: 0 auto;
+}
+.line {
+  width: 50px;
+  height: 2px;
+  background-color: #00a4e5;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.story_block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.story-h2 {
+  color: #48555b;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.306px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.story_block_left {
+}
+.story-p-top {
+  color: #48555b;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.188px;
+  width: 405.076px;
+  margin-bottom: 32px;
+}
+.story-p-bottom {
+  color: #48555b;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px; /* 176.923% */
+  letter-spacing: 0.188px;
+  width: 405.076px;
+  margin: 0;
+}
+.Konstruct {
+  color: #00a4e5;
+}
+
+.story_block_right {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+.h2-story_block_right {
+  color: #fff;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 29px; /* 120.833% */
+  letter-spacing: 0.188px;
+  text-transform: uppercase;
+  width: 140px;
+  height: 224px;
+  margin: 0;
+}
+
+.story_block_right h2:first-child {
+  background-image: url(../img/plan.jpg);
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 12px;
+}
+.story_block_right h2:nth-child(2) {
+  background-image: url(../img/manage.jpg);
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 12px;
+}
+.story_block_right h2:nth-child(3) {
+  background-image: url(../img/Bitmap.jpg);
+  padding-top: 16px;
+  padding-left: 14px;
+  padding-right: 12px;
 }
