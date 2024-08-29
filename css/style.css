@@ -19,9 +19,11 @@ body {
 }
 
 /*********************************************************** Шапка *************************************************************/
+
 header {
   background-image: url(../img/bg.jpg);
-  min-width: 1440px;
+  width: 100%;
+  /* min-width: 1440px; */
   height: 769px;
   background-repeat: no-repeat;
   background-size: 1550px 769px;
@@ -61,7 +63,6 @@ header {
   margin: 0 auto;
   padding-left: 10px;
   padding-top: 6px;
-  height: 77px;
 }
 .header-p {
   color: #fff;
@@ -164,6 +165,7 @@ header {
 .story_block {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .story-h2 {
@@ -187,7 +189,7 @@ header {
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.188px;
-  width: 405.076px;
+  max-width: 405.076px;
   margin-bottom: 32px;
 }
 .story-p-bottom {
@@ -197,7 +199,7 @@ header {
   font-weight: 400;
   line-height: 23px; /* 176.923% */
   letter-spacing: 0.188px;
-  width: 405.076px;
+  max-width: 405.076px;
   margin: 0;
 }
 .Konstruct {
@@ -206,6 +208,7 @@ header {
 
 .story_block_right {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
   gap: 20px;
@@ -249,6 +252,7 @@ header {
 }
 .Box__Our-Capabilities {
   display: flex;
+  flex-wrap: wrap;
   gap: 155px;
   margin-bottom: 78px;
 }
@@ -274,6 +278,7 @@ header {
 }
 .Right-Our-Capabilities {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
 }
@@ -285,8 +290,8 @@ header {
   line-height: 19px; /* 172.727% */
   letter-spacing: 0.2px;
   margin: 0;
-  width: 405.404px;
-  height: 38px;
+  max-width: 405.404px;
+  max-height: 38px;
   gap: 20px;
 }
 .button-Our-Capabilities {
@@ -356,7 +361,8 @@ header {
   background-image: url(../img/bg-footter.png);
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 1440px;
+  width: 100%;
+  /* max-width: 1440px; */
   background-size: 1550px 501px;
   height: 498.24px;
   display: flex;
@@ -371,8 +377,7 @@ header {
   font-weight: 700;
   line-height: 36px; /* 120% */
   letter-spacing: 0.15px;
-  width: 350px;
-  height: 72px;
+  max-width: 350px;
   margin: 0 auto;
   margin-top: 120px;
   margin-bottom: 35px;
@@ -396,14 +401,17 @@ header {
 .want-top_button:hover {
   background-color: #e500a0;
 }
-.want-bottom {
+.want-bottom-background {
   background-color: #141a20;
+}
+.want-bottom {
   height: 100px;
   margin: 0 auto;
 }
 
 .want-bottom-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 70px;
@@ -419,7 +427,6 @@ header {
   letter-spacing: 0.846px;
   margin: 0;
 }
-
 .form {
   width: 250px;
   height: 40px;
@@ -470,12 +477,14 @@ select:focus {
 
 .footer-1 {
   background-color: #141a20;
-  height: 240px;
+  height: 100%;
+  min-height: 240px;
   margin: 0;
   padding-top: 40px;
 }
 .flex-big-blok {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .company {
 }
@@ -646,4 +655,164 @@ select:focus {
   line-height: normal;
   letter-spacing: 0.846px;
   margin: 0 auto;
+}
+/*********************************************************** media *************************************************************/
+@media screen and (max-width: 1450px) {
+  .container {
+    padding: 0 30px;
+  }
+  .Box__Our-Capabilities {
+    gap: 10px;
+  }
+  .story_block {
+    justify-content: center;
+  }
+  .story-p-bottom {
+    margin-bottom: 20px;
+  }
+  .want-bottom-items {
+    gap: 10px;
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .links,
+  .contact_us,
+  .social_links {
+    margin-left: 0px;
+    justify-content: center;
+  }
+  .links-flex {
+    justify-content: space-between;
+  }
+  .nav-links-2,
+  .nav-links-3 {
+    margin-left: 0px;
+  }
+  .p-company {
+    margin-bottom: 30px;
+  }
+  .flex-big-blok {
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Уменьшаем количество колонок до 3 */
+    grid-template-rows: auto auto; /* Добавляем новую строку для social_links */
+  }
+  .social_links {
+    grid-column: 1 / -1; /* Занимает всю ширину строки */
+    justify-content: center; /* Выравнивание по центру */
+    margin-left: 0; /* Убираем отступ слева */
+    margin-top: 20px; /* Добавляем отступ сверху */
+  }
+}
+@media screen and (max-width: 1150px) {
+  .Our-Capabilities-bottom {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .menu_inner {
+    flex-wrap: wrap;
+  }
+  .story_block_right {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 990px) {
+  .flex-big-blok {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+  .contact_us {
+    grid-column: 1 / -1;
+  }
+  .menu_inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    padding: 20px;
+  }
+  .Box__Our-Capabilities,
+  .Right-Our-Capabilities {
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .flex-big-blok {
+    grid-template-columns: 1fr; /* Один столбец для company */
+    grid-template-rows: auto auto; /* Два ряда: один для company, второй для остальных блоков */
+  }
+  .h3-links {
+    text-align: center;
+  }
+  .company {
+    grid-column: 1 / -1; /* Занимает всю ширину строки */
+    margin-bottom: 20px; /* Отступ снизу для блока company */
+  }
+
+  .contact_us,
+  .links {
+    grid-column: span 1; /* Каждый из этих блоков занимает одну колонку */
+  }
+
+  .contact_us {
+    margin-right: 10px; /* Добавляем отступ справа между контактами и ссылками */
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .menu_inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .nav li:nth-child(2) a {
+    padding-left: 0px;
+  }
+  .nav li:nth-child(3) a {
+    padding-left: 0px;
+  }
+  .nav li:nth-child(4) a {
+    padding-left: 0px;
+  }
+  .nav li:nth-child(5) a {
+    padding-left: 0px;
+  }
+  .email-input {
+    max-width: 250px;
+  }
+  .company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 440px) {
+  .form__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Добавляем отступ между email и submit */
+  }
+
+  .email-input,
+  .submit-button {
+    width: 100%; /* Занимает всю ширину контейнера */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+  }
+
+  .email-input {
+    margin-bottom: 10px; /* Отступ между полем email и кнопкой */
+  }
 }
